@@ -1,0 +1,6 @@
+{
+  "name": "Tómbola de Preguntas & Desafíos",
+  "description": "Tómbola interactiva con registro de boletos con preguntas y textos, panel de personalización y control de porcentaje de predicción.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
