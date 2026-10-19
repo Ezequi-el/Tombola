@@ -980,7 +980,7 @@ export const TombolaDrum3D: React.FC<TombolaDrum3DProps> = ({
               ? 'bg-pink-300 text-white animate-pulse shadow-[0_4px_0_#f472b6] cursor-wait'
               : `${themeStyle.accent} ${themeStyle.accentText} hover:scale-[1.02] cursor-pointer`
           }`}
-          style={{ fontFamily: "'Fredoka', 'Outfit', sans-serif" }}
+          style={{ fontFamily: "'Fredoka Variable', 'Outfit Variable', sans-serif" }}
         >
           {isSpinning ? (
             <>

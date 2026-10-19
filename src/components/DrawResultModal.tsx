@@ -115,7 +115,7 @@ export const DrawResultModal: React.FC<DrawResultModalProps> = ({
           <div className="space-y-2">
             <h3
               className="text-2xl sm:text-3xl font-extrabold text-slate-800 leading-snug tracking-normal px-2"
-              style={{ fontFamily: "'Fredoka', 'Outfit', sans-serif" }}
+              style={{ fontFamily: "'Fredoka Variable', 'Outfit Variable', sans-serif" }}
             >
               "{ticket.text}"
             </h3>
@@ -159,7 +159,7 @@ export const DrawResultModal: React.FC<DrawResultModalProps> = ({
             <button
               onClick={onSpinAgain}
               className="w-full sm:w-auto px-7 py-3 text-sm font-extrabold text-white bg-pink-400 hover:bg-pink-500 rounded-2xl transition-all shadow-[0_5px_0_#db2777] active:translate-y-1.5 active:shadow-none flex items-center justify-center gap-2 cursor-pointer"
-              style={{ fontFamily: "'Fredoka', 'Outfit', sans-serif" }}
+              style={{ fontFamily: "'Fredoka Variable', 'Outfit Variable', sans-serif" }}
             >
               <span>¡Girar Otra Pregunta!</span>
               <span className="text-lg">🎲</span>

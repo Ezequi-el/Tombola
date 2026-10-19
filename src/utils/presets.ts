@@ -114,120 +114,137 @@ export const THEME_STYLES: Record<TombolaTheme, {
   },
 };
 
-export const INITIAL_TICKETS: Ticket[] = [
-  {
-    id: 't-1',
-    text: '¿Cuál es tu juego o actividad favorita para jugar en el recreo?',
-    author: 'Maestra Andrea',
-    category: 'Recreo & Juegos',
-    color: '#FF9AA2',
-    weight: 15,
-    createdAt: Date.now() - 50000,
-    timesDrawn: 0,
-  },
-  {
-    id: 't-2',
-    text: 'Si pudieras tener cualquier animal del mundo como mascota mágica, ¿cuál elegirías y cómo se llamaría?',
-    author: 'Lucas (3ro B)',
-    category: 'Imaginación',
-    color: '#BAE6FD',
-    weight: 20,
-    createdAt: Date.now() - 40000,
-    timesDrawn: 0,
-  },
-  {
-    id: 't-3',
-    text: '¡Reto divertido! Imita el sonido y movimiento de un monito alegre por 10 segundos.',
-    author: 'Sofi (4to A)',
-    category: 'Reto Divertido',
-    color: '#FBCFE8',
-    weight: 25,
-    createdAt: Date.now() - 30000,
-    timesDrawn: 0,
-  },
-  {
-    id: 't-4',
-    text: 'Si inventaras un sabor de helado súper loco, ¿de qué sería y qué chispitas tendría arriba?',
-    author: 'Mateo (2do C)',
-    category: 'Comida & Dulces',
-    color: '#B5EAD7',
-    weight: 10,
-    createdAt: Date.now() - 20000,
-    timesDrawn: 0,
-  },
-  {
-    id: 't-5',
-    text: '¿Qué superpoder te gustaría tener por un día: volar como pájaro o hablar con los perritos y gatitos?',
-    author: 'Valeria (5to B)',
-    category: 'Superpoderes',
-    color: '#DDD6FE',
-    weight: 15,
-    createdAt: Date.now() - 10000,
-    timesDrawn: 0,
-  },
-  {
-    id: 't-6',
-    text: 'Di algo bonito o divertido que te guste de tu salón de clases.',
-    author: 'Profesor Carlos',
-    category: 'Compañerismo',
-    color: '#FFEAA7',
-    weight: 15,
-    createdAt: Date.now() - 5000,
-    timesDrawn: 0,
-  },
-];
-
 export const PRESET_PACKS: PresetCategory[] = [
   {
-    id: 'pack-school-fun',
-    name: 'Recreo & Vida Escolar',
-    description: 'Preguntas alegres sobre recreos, materias favoritas, meriendas y juegos con amigos.',
-    icon: '🎒',
-    tickets: [
-      { text: '¿Cuál es la merienda más rica que te han mandado a la escuela?', author: 'Escuela', category: 'Recreo', color: '#FFB7B2', weight: 10 },
-      { text: '¿Qué materia o clase te divierte más y por qué?', author: 'Escuela', category: 'Clases', color: '#B5EAD7', weight: 10 },
-      { text: '¿A qué te gusta más jugar: atrapadas, escondite, fútbol o rayuela?', author: 'Escuela', category: 'Juegos', color: '#BAE6FD', weight: 10 },
-      { text: 'Si pudieras decorar tu salón de clases como quisieras, ¿cómo se vería?', author: 'Escuela', category: 'Creatividad', color: '#DDD6FE', weight: 10 },
-      { text: '¿Cuál es tu canción o baile favorito para bailar en fiestas infantiles?', author: 'Escuela', category: 'Música', color: '#FFDAC1', weight: 10 },
-    ],
+    "id": "seccion-preguntas",
+    "name": "Sección de preguntas",
+    "description": "Preguntas sobre el cuidado del cuerpo, la alimentación y el movimiento.",
+    "icon": "❓",
+    "tickets": [
+      {
+        "text": "¿Qué podrías hacer durante el día para cuidar tu cuerpo?",
+        "category": "Preguntas",
+        "color": "#BAE6FD",
+        "weight": 10
+      },
+      {
+        "text": "Después de estar varias horas sentado, tienes 15 minutos libres. ¿Qué podrías hacer?",
+        "category": "Preguntas",
+        "color": "#BAE6FD",
+        "weight": 10
+      },
+      {
+        "text": "Vas a pasar varias horas fuera de casa. ¿Qué podrías llevar para comer?",
+        "category": "Preguntas",
+        "color": "#BAE6FD",
+        "weight": 10
+      },
+      {
+        "text": "Hoy no tienes ganas de practicar un deporte. ¿De qué otra manera podrías moverte?",
+        "category": "Preguntas",
+        "color": "#BAE6FD",
+        "weight": 10
+      },
+      {
+        "text": "Si pudieras agregar un alimento diferente a tu comida de hoy, ¿cuál elegirías y por qué?",
+        "category": "Preguntas",
+        "color": "#BAE6FD",
+        "weight": 10
+      },
+      {
+        "text": "¿Por qué crees que necesitamos diferentes tipos de alimentos?",
+        "category": "Preguntas",
+        "color": "#BAE6FD",
+        "weight": 10
+      },
+      {
+        "text": "¿Qué actividad física disfrutas hacer?",
+        "category": "Preguntas",
+        "color": "#BAE6FD",
+        "weight": 10
+      },
+      {
+        "text": "Después de jugar y moverte mucho, ¿qué crees que necesita tu cuerpo?",
+        "category": "Preguntas",
+        "color": "#BAE6FD",
+        "weight": 10
+      },
+      {
+        "text": "¿Qué podrías hacer durante el día para cuidar tu cuerpo?",
+        "category": "Preguntas",
+        "color": "#BAE6FD",
+        "weight": 10
+      }
+    ]
   },
   {
-    id: 'pack-challenges-kids',
-    name: 'Retos & Risas en Grupo',
-    description: 'Desafíos graciosos y sanos para reírse en el aula o fiesta sin parar.',
-    icon: '⭐',
-    tickets: [
-      { text: '¡Reto! Haz tu mejor imitación de un dinosaurio T-Rex rugiendo.', author: 'Animador', category: 'Reto', color: '#FF9AA2', weight: 15 },
-      { text: '¡Reto! Intenta decir este trabalenguas rápido: "Tres tristes tigres tragaban trigo en un trigal".', author: 'Animador', category: 'Reto', color: '#FED7AA', weight: 15 },
-      { text: '¡Reto! Camina como pingüino por el salón durante 15 segundos.', author: 'Animador', category: 'Reto', color: '#A7F3D0', weight: 15 },
-      { text: '¡Reto! Canta el coro de tu canción favorita con voz de ardillita.', author: 'Animador', category: 'Reto', color: '#C4B5FD', weight: 15 },
-      { text: '¡Reto! Haz 5 saltos de tijera diciendo una fruta diferente en cada salto.', author: 'Animador', category: 'Reto', color: '#BAE6FD', weight: 15 },
-    ],
-  },
-  {
-    id: 'pack-magic-powers',
-    name: 'Mundos Mágicos & Fantasía',
-    description: 'Preguntas de imaginación pura, dragones, castillos, naves espaciales y magia.',
-    icon: '🦄',
-    tickets: [
-      { text: 'Si viajaras al espacio en un cohete de caramelo, ¿a qué planeta irías?', author: 'Fantasía', category: 'Espacio', color: '#DDD6FE', weight: 10 },
-      { text: 'Si un hada o un mago te concediera tres deseos hoy, ¿qué pedirías?', author: 'Fantasía', category: 'Deseos', color: '#FBCFE8', weight: 10 },
-      { text: '¿Qué harías si los juguetes cobraran vida por la noche como en Toy Story?', author: 'Fantasía', category: 'Imaginación', color: '#BAE6FD', weight: 10 },
-      { text: 'Si pudieras construir una casa en un árbol gigante, ¿qué tendría adentro?', author: 'Fantasía', category: 'Aventura', color: '#B5EAD7', weight: 10 },
-      { text: '¿Qué invento genial crearías para ayudar a todos los niños del mundo?', author: 'Fantasía', category: 'Inventos', color: '#FFEAA7', weight: 10 },
-    ],
-  },
-  {
-    id: 'pack-friendship',
-    name: 'Amigos & Buen Corazón',
-    description: 'Preguntas para fortalecer la empatía, el cariño y el compañerismo en el grupo.',
-    icon: '💖',
-    tickets: [
-      { text: 'Di tres cosas amables sobre tu compañero de al lado.', author: 'Convivencia', category: 'Cariño', color: '#FBCFE8', weight: 10 },
-      { text: '¿Qué es lo que más te gusta hacer cuando estás con tus mejores amigos?', author: 'Convivencia', category: 'Amistad', color: '#BAE6FD', weight: 10 },
-      { text: '¿Qué haces para animar a un amigo cuando lo ves triste o solito?', author: 'Convivencia', category: 'Empatía', color: '#B5EAD7', weight: 10 },
-      { text: '¿Qué es lo más divertido que has aprendido este año?', author: 'Convivencia', category: 'Aprendizaje', color: '#FFEAA7', weight: 10 },
-      { text: 'Si hicieras un club secreto de amigos, ¿cuál sería el lema o saludo secreto?', author: 'Convivencia', category: 'Amistad', color: '#DDD6FE', weight: 10 },
-    ],
-  },
+    "id": "seccion-frases",
+    "name": "Sección de frases",
+    "description": "Frases para disfrutar el movimiento y la alimentación.",
+    "icon": "💬",
+    "tickets": [
+      {
+        "text": "Moverte es un superpoder! Encuentra el juego, baile o deporte que más te haga sonreír hoy.",
+        "category": "Frases",
+        "color": "#B5EAD7",
+        "weight": 10
+      },
+      {
+        "text": "Tu cuerpo es asombroso y capaz de grandes cosas. ¡Dale el movimiento que más disfrute!",
+        "category": "Frases",
+        "color": "#B5EAD7",
+        "weight": 10
+      },
+      {
+        "text": "Incluso 15 minutos de juego libre pueden llenar tu día de energía. ¡Sal a divertirte!",
+        "category": "Frases",
+        "color": "#B5EAD7",
+        "weight": 10
+      },
+      {
+        "text": "No hay una sola forma de estar activo. ¡Camina, salta, baila o corre, lo que te haga feliz!",
+        "category": "Frases",
+        "color": "#B5EAD7",
+        "weight": 10
+      },
+      {
+        "text": "Cuando juegas y te mueves, ¡tu cuerpo y tu mente te lo agradecen con mucha alegría!",
+        "category": "Frases",
+        "color": "#B5EAD7",
+        "weight": 10
+      },
+      {
+        "text": "Probar alimentos nuevos es como una aventura para tu paladar. ¡Atrévete a descubrir nuevos sabores!",
+        "category": "Frases",
+        "color": "#B5EAD7",
+        "weight": 10
+      },
+      {
+        "text": "Llenar tu día de colores en tus comidas es la mejor forma de darle a tu cuerpo la energía que necesita.",
+        "category": "Frases",
+        "color": "#B5EAD7",
+        "weight": 10
+      },
+      {
+        "text": "¡Cada pequeño bocado saludable y rico es un regalo de energía y fuerza para ti!",
+        "category": "Frases",
+        "color": "#B5EAD7",
+        "weight": 10
+      },
+      {
+        "text": "Escucha a tu cuerpo: él sabe cuándo necesita agua, comida rica o un buen descanso.",
+        "category": "Frases",
+        "color": "#B5EAD7",
+        "weight": 10
+      },
+      {
+        "text": "Alimentarte bien no se trata de reglas, sino de elegir con amor lo que te hace sentir fuerte y feliz.",
+        "category": "Frases",
+        "color": "#B5EAD7",
+        "weight": 10
+      }
+    ]
+  }
 ];
+
+export const INITIAL_TICKETS: Ticket[] = PRESET_PACKS[0].tickets.map((ticket, index) => ({ ...ticket, id: "pregunta-" + (index + 1), createdAt: 0, timesDrawn: 0 }));

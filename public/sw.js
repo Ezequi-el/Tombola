@@ -1,49 +1,43 @@
-const CACHE = 'tombola-v1';
-const CORE = ['/', '/index.html', '/manifest.webmanifest'];
+// Filled by scripts/build-pwa.mjs after Vite has emitted every asset.
+const CACHE = 'tombola-pwa-__BUILD_REVISION__';
+const CORE = [] /* __PRECACHE__ */;
 
-self.addEventListener('install', (e) => {
-  e.waitUntil(caches.open(CACHE).then((c) => c.addAll(CORE)));
-  self.skipWaiting();
+self.addEventListener('install', (event) => {
+  // Installation succeeds only if the complete app (including fonts) is cached.
+  event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(
+    CORE.map(url => new Request(url, { cache: 'reload' }))
+  )));
+  // Updates wait until existing windows close, keeping HTML and assets together.
 });
 
-self.addEventListener('activate', (e) => {
-  e.waitUntil(
-    caches.keys()
-      .then((keys) => Promise.all(keys.filter((k) => k !== CACHE).map((k) => caches.delete(k))))
-      .then(() => self.clients.claim())
-  );
+self.addEventListener('activate', (event) => {
+  event.waitUntil((async () => {
+    const keys = await caches.keys();
+    await Promise.all(keys.filter(key =>
+      key !== CACHE && (key.startsWith('tombola-pwa-') || key === 'tombola-v1')
+    ).map(key => caches.delete(key)));
+    await self.clients.claim();
+  })());
 });
 
-self.addEventListener('fetch', (e) => {
-  const req = e.request;
-  if (req.method !== 'GET' || new URL(req.url).origin !== location.origin) return;
-
-  // Navegación: red primero, y si no hay internet, el index guardado
-  if (req.mode === 'navigate') {
-    e.respondWith(
-      fetch(req)
-        .then((r) => {
-          const copy = r.clone();
-          caches.open(CACHE).then((c) => c.put('/index.html', copy));
-          return r;
-        })
-        .catch(() => caches.match('/index.html'))
-    );
-    return;
+self.addEventListener('fetch', (event) => {
+  const request = event.request;
+  const url = new URL(request.url);
+  if (request.method !== 'GET' || url.origin !== self.location.origin) return;
+  // Never cache API responses or unrelated resources as app assets.
+  if (request.mode === 'navigate') {
+    event.respondWith(caches.open(CACHE).then(async cache =>
+      (await cache.match('/index.html')) || fetch(request)
+    ));
+  } else if (CORE.includes(url.pathname)) {
+    event.respondWith(caches.open(CACHE).then(async cache =>
+      (await cache.match(url.pathname)) || fetch(request)
+    ));
   }
+});
 
-  // Archivos JS/CSS/imágenes: caché primero, y se guardan al cargarse
-  e.respondWith(
-    caches.match(req).then(
-      (hit) =>
-        hit ||
-        fetch(req).then((r) => {
-          if (r.ok) {
-            const copy = r.clone();
-            caches.open(CACHE).then((c) => c.put(req, copy));
-          }
-          return r;
-        })
-    )
-  );
+self.addEventListener('message', (event) => {
+  if (event.data === 'TOMBOLA_OFFLINE_STATUS') {
+    event.source?.postMessage({ type: 'TOMBOLA_OFFLINE_READY' });
+  }
 });

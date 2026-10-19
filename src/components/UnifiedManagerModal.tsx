@@ -329,7 +329,7 @@ export const UnifiedManagerModal: React.FC<UnifiedManagerModalProps> = ({
             <div>
               <h2
                 className="text-lg md:text-xl font-extrabold text-slate-800 tracking-tight"
-                style={{ fontFamily: "'Fredoka', 'Outfit', sans-serif" }}
+                style={{ fontFamily: "'Fredoka Variable', 'Outfit Variable', sans-serif" }}
               >
                 Panel de Boletos & Bancos de Preguntas
               </h2>
@@ -416,7 +416,7 @@ export const UnifiedManagerModal: React.FC<UnifiedManagerModalProps> = ({
                     <div>
                       <h3
                         className="text-sm font-extrabold text-slate-800"
-                        style={{ fontFamily: "'Fredoka', 'Outfit', sans-serif" }}
+                        style={{ fontFamily: "'Fredoka Variable', 'Outfit Variable', sans-serif" }}
                       >
                         Bancos de Preguntas Disponibles
                       </h3>
@@ -438,7 +438,7 @@ export const UnifiedManagerModal: React.FC<UnifiedManagerModalProps> = ({
                       <button
                         onClick={() => setPackSubView('create')}
                         className="px-4 py-2 text-xs font-extrabold text-white bg-pink-400 hover:bg-pink-500 rounded-2xl transition-all shadow-[0_3px_0_#db2777] active:translate-y-1 active:shadow-none flex items-center gap-1.5 cursor-pointer"
-                        style={{ fontFamily: "'Fredoka', 'Outfit', sans-serif" }}
+                        style={{ fontFamily: "'Fredoka Variable', 'Outfit Variable', sans-serif" }}
                       >
                         <span>➕</span>
                         <span>Crear Nuevo Banco</span>
@@ -462,7 +462,7 @@ export const UnifiedManagerModal: React.FC<UnifiedManagerModalProps> = ({
                               <div>
                                 <h4
                                   className="text-base font-extrabold text-slate-800"
-                                  style={{ fontFamily: "'Fredoka', 'Outfit', sans-serif" }}
+                                  style={{ fontFamily: "'Fredoka Variable', 'Outfit Variable', sans-serif" }}
                                 >
                                   {pack.name}
                                 </h4>
@@ -558,7 +558,7 @@ export const UnifiedManagerModal: React.FC<UnifiedManagerModalProps> = ({
                       <div>
                         <h4
                           className="text-sm font-extrabold text-slate-800"
-                          style={{ fontFamily: "'Fredoka', 'Outfit', sans-serif" }}
+                          style={{ fontFamily: "'Fredoka Variable', 'Outfit Variable', sans-serif" }}
                         >
                           Boletos actualmente en el Bolillero ({tickets.length})
                         </h4>
@@ -686,7 +686,7 @@ export const UnifiedManagerModal: React.FC<UnifiedManagerModalProps> = ({
                       </button>
                       <h3
                         className="text-base font-extrabold text-slate-800"
-                        style={{ fontFamily: "'Fredoka', 'Outfit', sans-serif" }}
+                        style={{ fontFamily: "'Fredoka Variable', 'Outfit Variable', sans-serif" }}
                       >
                         Crear Nuevo Banco de Preguntas
                       </h3>
@@ -766,7 +766,7 @@ export const UnifiedManagerModal: React.FC<UnifiedManagerModalProps> = ({
                     <button
                       type="submit"
                       className="px-7 py-2.5 text-xs font-extrabold text-white bg-pink-400 hover:bg-pink-500 rounded-2xl transition-all shadow-[0_4px_0_#db2777] active:translate-y-1 active:shadow-none cursor-pointer"
-                      style={{ fontFamily: "'Fredoka', 'Outfit', sans-serif" }}
+                      style={{ fontFamily: "'Fredoka Variable', 'Outfit Variable', sans-serif" }}
                     >
                       ¡Crear y Guardar Banco! ⭐
                     </button>
@@ -789,7 +789,7 @@ export const UnifiedManagerModal: React.FC<UnifiedManagerModalProps> = ({
                       </button>
                       <h3
                         className="text-base font-extrabold text-slate-800 flex items-center gap-2"
-                        style={{ fontFamily: "'Fredoka', 'Outfit', sans-serif" }}
+                        style={{ fontFamily: "'Fredoka Variable', 'Outfit Variable', sans-serif" }}
                       >
                         <span>Editando Banco:</span>
                         <span className="text-pink-600">{currentEditingPack.name}</span>
@@ -864,7 +864,7 @@ export const UnifiedManagerModal: React.FC<UnifiedManagerModalProps> = ({
                       <button
                         type="submit"
                         className="py-2 px-5 text-xs font-extrabold text-white bg-pink-400 hover:bg-pink-500 rounded-2xl shadow-[0_3px_0_#db2777] active:translate-y-1 active:shadow-none cursor-pointer whitespace-nowrap"
-                        style={{ fontFamily: "'Fredoka', 'Outfit', sans-serif" }}
+                        style={{ fontFamily: "'Fredoka Variable', 'Outfit Variable', sans-serif" }}
                       >
                         + Añadir al Banco
                       </button>
@@ -1069,7 +1069,7 @@ export const UnifiedManagerModal: React.FC<UnifiedManagerModalProps> = ({
                     <button
                       type="submit"
                       className="px-7 py-3 text-sm font-extrabold text-white bg-pink-400 hover:bg-pink-500 rounded-2xl transition-all shadow-[0_4px_0_#db2777] active:translate-y-1 active:shadow-none cursor-pointer flex items-center gap-2"
-                      style={{ fontFamily: "'Fredoka', 'Outfit', sans-serif" }}
+                      style={{ fontFamily: "'Fredoka Variable', 'Outfit Variable', sans-serif" }}
                     >
                       <span>¡Meter a la Tómbola Mágica!</span>
                       <span>✨</span>
@@ -1128,7 +1128,7 @@ export const UnifiedManagerModal: React.FC<UnifiedManagerModalProps> = ({
                     <button
                       type="submit"
                       className="px-7 py-3 text-sm font-extrabold text-white bg-pink-400 hover:bg-pink-500 rounded-2xl transition-all shadow-[0_4px_0_#db2777] active:translate-y-1 active:shadow-none cursor-pointer flex items-center gap-2"
-                      style={{ fontFamily: "'Fredoka', 'Outfit', sans-serif" }}
+                      style={{ fontFamily: "'Fredoka Variable', 'Outfit Variable', sans-serif" }}
                     >
                       <span>Cargar Todas las Esferas Pastel</span>
                       <span>🌈</span>
@@ -1146,7 +1146,7 @@ export const UnifiedManagerModal: React.FC<UnifiedManagerModalProps> = ({
                 <div>
                   <h3
                     className="text-sm font-extrabold text-slate-800"
-                    style={{ fontFamily: "'Fredoka', 'Outfit', sans-serif" }}
+                    style={{ fontFamily: "'Fredoka Variable', 'Outfit Variable', sans-serif" }}
                   >
                     Control de Frecuencia Secreta
                   </h3>
@@ -1329,7 +1329,7 @@ export const UnifiedManagerModal: React.FC<UnifiedManagerModalProps> = ({
           <button
             onClick={onClose}
             className="px-6 py-2.5 text-xs font-extrabold text-white bg-pink-400 hover:bg-pink-500 rounded-2xl transition-all shadow-[0_3px_0_#db2777] active:translate-y-1 active:shadow-none cursor-pointer"
-            style={{ fontFamily: "'Fredoka', 'Outfit', sans-serif" }}
+            style={{ fontFamily: "'Fredoka Variable', 'Outfit Variable', sans-serif" }}
           >
             ¡Listo! Volver a la Tómbola 🎲
           </button>
@@ -1344,7 +1344,7 @@ export const UnifiedManagerModal: React.FC<UnifiedManagerModalProps> = ({
               <span className="text-2xl">💾</span>
               <h4
                 className="text-base font-extrabold text-slate-800"
-                style={{ fontFamily: "'Fredoka', 'Outfit', sans-serif" }}
+                style={{ fontFamily: "'Fredoka Variable', 'Outfit Variable', sans-serif" }}
               >
                 Guardar Tómbola Actual como Banco
               </h4>

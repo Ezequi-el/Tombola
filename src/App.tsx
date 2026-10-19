@@ -6,7 +6,11 @@ import { UnifiedManagerModal } from './components/UnifiedManagerModal';
 import { DrawResultModal } from './components/DrawResultModal';
 import { HistoryDrawer } from './components/HistoryDrawer';
 
+import { PwaControls } from './components/PwaControls';
+
+const PACKS_REVISION = 'secciones-salud-v1';
 const STORAGE_KEYS = {
+  PACKS_REVISION: 'tombola_question_packs_revision',
   TICKETS: 'tombola_tickets_v3_pastel',
   CONFIG: 'tombola_config_v3_pastel',
   HISTORY: 'tombola_history_v3_pastel',
@@ -37,6 +41,7 @@ export default function App() {
 
   const [questionPacks, setQuestionPacks] = useState<QuestionPack[]>(() => {
     try {
+      if (localStorage.getItem(STORAGE_KEYS.PACKS_REVISION) !== PACKS_REVISION) return PRESET_PACKS;
       const saved = localStorage.getItem(STORAGE_KEYS.PACKS);
       if (saved) return JSON.parse(saved);
     } catch {}
@@ -79,6 +84,7 @@ export default function App() {
   useEffect(() => {
     try {
       localStorage.setItem(STORAGE_KEYS.PACKS, JSON.stringify(questionPacks));
+      localStorage.setItem(STORAGE_KEYS.PACKS_REVISION, PACKS_REVISION);
     } catch {}
   }, [questionPacks]);
 
@@ -317,7 +323,7 @@ export default function App() {
       className={`min-h-screen bg-gradient-to-b ${currentTheme.bgGradient} text-slate-800 flex flex-col relative overflow-x-hidden ${
         isFullscreen ? 'fixed inset-0 z-50 overflow-hidden' : ''
       }`}
-      style={{ fontFamily: "'Plus Jakarta Sans', 'Outfit', sans-serif" }}
+      style={{ fontFamily: "'Plus Jakarta Sans Variable', 'Outfit Variable', sans-serif" }}
     >
       {/* Decorative Pastel Background Shapes */}
       <div className="absolute top-10 left-8 text-3xl select-none pointer-events-none opacity-60 animate-bounce duration-1000">
@@ -341,7 +347,7 @@ export default function App() {
             <a
               href="/"
               className="text-xl md:text-2xl font-extrabold tracking-tight text-pink-600 hover:text-pink-700 transition-colors flex items-center gap-2"
-              style={{ fontFamily: "'Fredoka', 'Outfit', sans-serif" }}
+              style={{ fontFamily: "'Fredoka Variable', 'Outfit Variable', sans-serif" }}
             >
               <span className="text-2xl animate-bounce">🎪</span>
               <span>Tómbola Mágica</span>
@@ -393,7 +399,7 @@ export default function App() {
               <button
                 onClick={() => setIsUnifiedManagerOpen(true)}
                 className="px-4 py-2 text-xs font-extrabold text-white bg-pink-400 hover:bg-pink-500 rounded-2xl transition-all shadow-[0_3px_0_#db2777] active:translate-y-1 active:shadow-none flex items-center gap-1.5 cursor-pointer"
-                style={{ fontFamily: "'Fredoka', 'Outfit', sans-serif" }}
+                style={{ fontFamily: "'Fredoka Variable', 'Outfit Variable', sans-serif" }}
               >
                 <span>🎒</span>
                 <span>Bancos & Boletos</span>
@@ -402,6 +408,8 @@ export default function App() {
           </div>
         </header>
       )}
+
+      <div className={isFullscreen ? "hidden" : ""}><PwaControls /></div>
 
       {/* FULLSCREEN MINIMAL FLOATING CONTROLS */}
       {isFullscreen && (
@@ -438,7 +446,7 @@ export default function App() {
         <div className="text-center space-y-1.5 mb-2">
           <h1
             className={`${isFullscreen ? 'text-2xl sm:text-4xl' : 'text-3xl sm:text-5xl'} font-extrabold text-slate-800 tracking-tight drop-shadow-xs`}
-            style={{ fontFamily: "'Fredoka', 'Outfit', sans-serif" }}
+            style={{ fontFamily: "'Fredoka Variable', 'Outfit Variable', sans-serif" }}
           >
             {config.title}
           </h1>
@@ -496,6 +504,7 @@ export default function App() {
           <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2 font-medium">
             <span>🎪 Tómbola de Preguntas para Primaria</span>
             <span>Bancos personalizables con creación, edición y guardado</span>
+            <span>Desarrollado y creado por <a href="https://github.com/Ezequi-el" className="font-bold text-pink-600 hover:text-pink-700 underline underline-offset-2">Ezequiel Hernández</a></span>
           </div>
         </footer>
       )}

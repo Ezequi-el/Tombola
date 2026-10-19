@@ -25,7 +25,7 @@ export const HistoryDrawer: React.FC<HistoryDrawerProps> = ({
             <span className="text-xl">🏆</span>
             <h2
               className="text-lg font-extrabold text-slate-800 tracking-tight"
-              style={{ fontFamily: "'Fredoka', 'Outfit', sans-serif" }}
+              style={{ fontFamily: "'Fredoka Variable', 'Outfit Variable', sans-serif" }}
             >
               Historial de Preguntas Jugadas ({history.length})
             </h2>
@@ -58,7 +58,7 @@ export const HistoryDrawer: React.FC<HistoryDrawerProps> = ({
                 </div>
                 <p
                   className="text-sm font-bold text-slate-800"
-                  style={{ fontFamily: "'Fredoka', 'Outfit', sans-serif" }}
+                  style={{ fontFamily: "'Fredoka Variable', 'Outfit Variable', sans-serif" }}
                 >
                   "{item.ticketText}"
                 </p>
